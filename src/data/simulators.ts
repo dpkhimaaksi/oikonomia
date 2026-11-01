@@ -1,0 +1,58 @@
+import { SimulatorInfo } from '../types';
+
+export const SIMULATORS_LIST: SimulatorInfo[] = [
+  {
+    id: 'sim-market-eq',
+    type: 'market-equilibrium',
+    categoryId: 'mikro',
+    title: 'Simulator Ekuilibrium Pasar & Intervensi',
+    description: 'Visualisasi interaktif pergeseran kurva Permintaan dan Penawaran, penentuan harga keseimbangan (P*), kuantitas (Q*), surplus ekonomi, serta dampak Plafon Harga, Lantai Harga, Pajak, dan Subsidi.',
+    parameters: ['Permintaan Awal (a, b)', 'Penawaran Awal (c, d)', 'Plafon / Lantai Harga', 'Tarif Pajak / Subsidi per unit'],
+    outputMetrics: ['Harga Keseimbangan (P*)', 'Kuantitas Keseimbangan (Q*)', 'Surplus Konsumen & Produsen', 'Deadweight Loss (DWL)'],
+  },
+  {
+    id: 'sim-multiplier',
+    type: 'macro-multiplier',
+    categoryId: 'makro',
+    title: 'Kalkulator Angka Pengganda Keynesian (Multiplier Effect)',
+    description: 'Hitung pelipatgandaan pendapatan nasional dari stimulus belanja pemerintah atau investasi swasta berdasarkan nilai MPC masyarakat, lengkap dengan simulasi putaran perputaran uang (rounds).',
+    parameters: ['Marginal Propensity to Consume (MPC)', 'Suntikan Belanja/Investasi (ΔG atau ΔI)', 'Tarif Pajak Proporsional (t)'],
+    outputMetrics: ['Multiplier Belanja (k_g)', 'Multiplier Pajak (k_t)', 'Total Kenaikan PDB (ΔY)', 'Simulasi 5 Putaran Konsumsi'],
+  },
+  {
+    id: 'sim-depreciation',
+    type: 'depreciation',
+    categoryId: 'akuntansi',
+    title: 'Kalkulator Penyusutan Aset Tetap & Jurnal Otomatis',
+    description: 'Bandingkan skedul penyusutan aset menggunakan Metode Garis Lurus, Saldo Menurun Ganda, dan Jumlah Angka Tahun, lengkap dengan jadwal buku tahunan dan draf jurnal penyesuaian otomatis.',
+    parameters: ['Harga Perolehan Aset (Cost)', 'Nilai Residu / Sisa (Salvage Value)', 'Umur Ekonomis (Tahun)', 'Metode Depresiasi'],
+    outputMetrics: ['Beban Penyusutan Tahunan', 'Akumulasi Penyusutan', 'Nilai Buku Akhir Periode', 'Jurnal Penyesuaian Debit/Kredit'],
+  },
+  {
+    id: 'sim-trial-balance',
+    type: 'trial-balance',
+    categoryId: 'akuntansi',
+    title: 'Generator & Verifikator Neraca Saldo (Trial Balance)',
+    description: 'Simulasi interaktif penyusunan neraca saldo 10 akun pokok, verifikasi keseimbangan total debit vs kredit, identifikasi selisih, dan pratinjau otomatis Laporan Laba Rugi.',
+    parameters: ['Saldo Akun Aset', 'Saldo Akun Liabilitas', 'Saldo Akun Ekuitas & Pendapatan', 'Saldo Akun Beban'],
+    outputMetrics: ['Total Debit vs Kredit', 'Status Keseimbangan (Balanced)', 'Laba Bersih Operasi Periode Berjalan'],
+  },
+  {
+    id: 'sim-elasticity',
+    type: 'elasticity',
+    categoryId: 'mikro',
+    title: 'Kalkulator Elastisitas Permintaan & Analisis Omzet (TR)',
+    description: 'Analisis sensitivitas harga terhadap kuantitas permintaan menggunakan metode titik tengah (mid-point), penentuan kategori elastisitas, dan rekomendasi strategi harga bagi pendapatan total (Total Revenue).',
+    parameters: ['Harga Awal (P1) & Baru (P2)', 'Kuantitas Awal (Q1) & Baru (Q2)'],
+    outputMetrics: ['Koefisien Elastisitas (Ed)', 'Klasifikasi (Elastis/Inelastis/Uniter)', 'Respon Total Pendapatan (TR Naik/Turun)'],
+  },
+  {
+    id: 'sim-gdp-inflation',
+    type: 'gdp-inflation',
+    categoryId: 'makro',
+    title: 'Kalkulator PDB Riil, Nominal & Deflator Inflasi',
+    description: 'Simulasikan perhitungan Produk Domestik Bruto menggunakan harga tahun berjalan vs harga konstan tahun dasar, hitung nilai Deflator PDB, dan laju inflasi harga komoditas agregat.',
+    parameters: ['PDB Nominal Tahun Berjalan', 'PDB Riil Tahun Dasar', 'IHK Periode Awal & Akhir'],
+    outputMetrics: ['Deflator PDB', 'Laju Inflasi Tahunan (%)', 'Laju Pertumbuhan Ekonomi Riil (%)'],
+  },
+];

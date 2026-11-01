@@ -1,0 +1,6 @@
+{
+  "name": "Oikonomia",
+  "description": "Platform bank materi dan alat bantu belajar interaktif untuk Akuntansi, Ekonomi Mikro, dan Ekonomi Makro dengan visualisasi kurva, kalkulator, dan latihan soal.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
